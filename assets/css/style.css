@@ -5,7 +5,7 @@
     --header_height: 3rem;
 
     /*CORES*/
-    --fav_color: 307;
+    --fav_color: 230;
 
     --main_color: hsl(var(--fav_color), 69%, 61%);
     --main_color_second:hsl(var(--fav_color), 69%, 61%);
@@ -327,4 +327,151 @@ img{
 .button_flex{
     display: inline-flex;
     align-items: center;
+}
+
+/*SOBRE*/
+.about_img{
+    width: 200px;
+    border-radius: .5rem;
+    justify-self: center;
+    align-self: center;
+}
+
+.about_description{
+    text-align: center;
+    margin-bottom: var(--mb_25);
+}
+
+.about_info{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: var(--mb_25);
+    margin-left: 3rem;
+}
+
+.about_info_title{
+    font-size: var(--h2_font_size);
+    font-weight: var(--font_semi_bold_weight);
+    color: var(--title_color);
+
+}
+
+.about_info_name{
+    font-size: var(--tiny_font_size);
+
+}
+
+.about_info_title, .about_info_name{
+    display: block;
+    text-align: center;
+
+}
+
+.about_buttons{
+    display: flex;
+    justify-content: center;
+}
+
+/*HABILIDADES*/
+.skills_container{
+    row-gap: 0;
+}
+
+.skills_header{
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--mb_25);
+    cursor: pointer;
+}
+
+.skills_icon, .skills_arrow{
+    font-size: 2rem;
+    color: var(--main_color);
+}
+
+.skills_icon{
+    margin-right: var(--mb_075);
+}
+
+.skills_title{
+    font-size: var(--h3_font_size);
+}
+
+.skills_subtitle{
+    font-size: var(--small_font_size);
+    color: var(--text_color_light);
+}
+
+.skills_arrow{
+    margin-left: auto;
+    transition: .4s;
+}
+
+.skills_list{
+    row-gap: 1.5rem;
+    padding-left: 2.7rem;
+}
+
+.skills_titles{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--mb_075);
+}
+
+.skills_name{
+    font-size: var(--normal_font_size);
+    font-weight: var(--font_medium_weight);
+}
+
+.skills_bar, .skills_percentage{
+    height: 5px;
+    border-radius: .25rem;
+}
+
+.skills_bar{
+    background-color: var(--main_color_lighter);
+}
+
+.skills_percentage{
+    display: block;
+    background-color: var(--main_color);
+
+}
+
+.skills_java{
+    width: 78%;
+}
+
+.skills_plsql{
+    width: 3%;
+}
+
+.skills_c{
+    width: 2%;
+}
+
+.skills_html{
+    width: 9%;
+}
+
+.skills_css{
+    width: 6%;
+}
+
+.skills_javaScript{
+    width: 2%;
+}
+
+.skills_close .skills_list{
+    height: 0;
+    overflow: hidden;
+}
+
+.skills_open .skills_list{
+    height: max-content;
+    margin-bottom: var(--mb_25);
+}
+
+.skills_open .skills_arrow{
+    transform: rotate(-180deg);
 }
