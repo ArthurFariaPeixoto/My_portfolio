@@ -23,9 +23,11 @@ function linkAction(){
     navMenu.classList.remove('show_menu')
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
+/////
 
 
 
+/*TIRA E MOSTRA HABILIDADES*/
 const skillsContent = document.getElementsByClassName('skills_content'),
     skillsHeader = document.querySelectorAll('.skills_header')
 
@@ -42,4 +44,26 @@ function ShowSkills(){
 
 skillsHeader.forEach((el) =>{
     el.addEventListener('click', ShowSkills)
+})
+/////
+
+
+/*ABAS DE QUALIFICAÇÕES*/
+const tabs = document.querySelectorAll('[data-target]'),
+    tabContents = document.querySelectorAll('[data-content]')
+
+tabs.forEach(tab =>{
+    tab.addEventListener('click', () =>{
+        const target = document.querySelector(tab.dataset.target)
+
+        tabContents.forEach(tabContent =>{
+            tabContent.classList.remove('qualification_active')
+        })
+        target.classList.add('qualification_active')
+
+        tab.forEach(tab =>{
+            tab.classList.remove('qualification_active')
+        })
+        tab.classList.add('qualification_active')
+    })
 })

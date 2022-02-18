@@ -475,3 +475,72 @@ img{
 .skills_open .skills_arrow{
     transform: rotate(-180deg);
 }
+
+
+/*QUALIFICAÇÕES*/
+.qualification_tabs{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: var(--mb_2);
+}
+
+.qualification_button{
+    font-size: var(--h3_font_size);
+    font-weight: var(--font_medium_weight);
+    cursor: pointer;
+}
+
+.qualification_button:hover{
+    color: var(--main_color);
+}
+
+.qualification_icon{
+    font-size: 1.8rem;
+    margin-right: var(--mb_025);
+}
+
+.qualification_data{
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    column-gap: 1.5rem;
+}
+
+.qualification_title{
+    font-size: var(--normal_font_size);
+    font-weight: var(--font_medium_weight);
+}
+
+.qualification_subtitle{
+    display: inline-block;
+    font-size: var(--small_font_size);
+    margin-bottom: var(--mb_1);
+}
+
+.qualification_calendar{
+    font-size: var(--tiny_font_size);
+    color: var(--text_color_light);
+}
+
+.qualification_rounder{
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background-color: var(--main_color);
+    border-radius: 50%;
+}
+
+.qualification_line{
+    display: block;
+    width: 1px;
+    height: 100%;
+    background-color: var(--main_color);
+    transform: translate(6px, -7px);
+}
+
+.qualification [data-content]{
+    display: none;
+}
+
+.qualification_active[data-content]{
+    display: block;
+}
