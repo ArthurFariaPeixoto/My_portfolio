@@ -454,7 +454,11 @@ img{
 }
 
 .skills_java{
-    width: 78%;
+    width: 66.6%;
+}
+
+.skills_php{
+    width: 8.3%;
 }
 
 .skills_plsql{
@@ -462,19 +466,19 @@ img{
 }
 
 .skills_c{
-    width: 2%;
+    width: 25%;
 }
 
 .skills_html{
-    width: 9%;
+    width: 22%;
 }
 
 .skills_css{
-    width: 6%;
+    width: 22%;
 }
 
 .skills_javaScript{
-    width: 2%;
+    width: 55%;
 }
 
 .skills_close .skills_list{
