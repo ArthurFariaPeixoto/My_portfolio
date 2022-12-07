@@ -17,6 +17,8 @@
     --input_color: hsl(var(--fav_color), 70%, 96%);
     --body_color: hsl(var(--fav_color), 60%, 99%);
     --container_color:#FFF;
+    --scroll_bar_color: hsl(var(--fav_color), 12%, 90%);
+    --scroll_thumb_color: hsl(var(--fav_color), 12%, 80%);
 
 
     /*TEXTO*/
@@ -62,6 +64,34 @@
         --tiny_font_size: .813rem;
     }
 }
+
+/*MODO ESCURO*/
+body.dark_theme{
+
+    --main_color_second:hsl(var(--fav_color), 30%, 8%);
+    --title_color: hsl(var(--fav_color), 8%, 95%);
+    --text_color: hsl(var(--fav_color), 8%, 75%);
+    --input_color: hsl(var(--fav_color), 29%, 16%);
+    --body_color: hsl(var(--fav_color), 28%, 12%);
+    --container_color: hsl(var(--fav_color), 29%, 16%);
+}
+
+.nav_buttons{
+    display: flex;
+    align-items: center;
+}
+
+.change_theme{
+    font-size: 1.25rem !important;
+    color: var(--title_color);
+    margin-right: var(--mb_1);
+    cursor: pointer;
+}
+
+.change_theme:hover{
+    color: var(--main_color);
+}
+
 
 /*CORPO DO SITE*/
 *{
@@ -221,6 +251,13 @@ img{
     bottom: 0;
 }
 
+.active-link{
+    color: var(--main_color)
+}
+
+.scroll-header{
+    box-shadow: 0 -1px 4px rgba(0,0,0,.30);
+}
 /*PRINCIPAL*/
 .home_container{
     gap: 1rem;
@@ -760,4 +797,39 @@ img{
 .footer_link,
 .footer_social{
     color: #FFF;
+}
+
+.scrollup{
+    position: fixed;
+    right: 1rem;
+    bottom: -20%;
+    background-color: var(--main_color);
+    opacity: .8;
+    padding: 0 .3rem;
+    border-radius: .4rem;
+    z-index: var(--z-tooltip);
+    transition: .4s;
+}
+
+.scrollup:hover{
+    background-color: var(--main_color_alt);
+}
+
+.scrollup_icon{
+    font-size: 1.5rem;
+    color: #FFF;
+}
+
+.show-scroll{
+    bottom: 5rem;
+}
+
+::-webkit-scrollbar{
+    width: .60rem;
+    background-color: var(--scroll_bar_color);
+    border-radius: .5rem;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--scroll_thumb_color);
 }
