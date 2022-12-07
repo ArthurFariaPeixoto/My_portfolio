@@ -74,6 +74,9 @@ body.dark_theme{
     --input_color: hsl(var(--fav_color), 29%, 16%);
     --body_color: hsl(var(--fav_color), 28%, 12%);
     --container_color: hsl(var(--fav_color), 29%, 16%);
+    --scroll_bar_color: hsl(var(--fav_color), 12%, 48%);
+    --scroll_thumb_color: hsl(var(--fav_color), 12%, 36%);
+
 }
 
 .nav_buttons{
@@ -832,4 +835,5 @@ img{
 
 ::-webkit-scrollbar-thumb{
     background-color: var(--scroll_thumb_color);
+    border-radius: .5rem;
 }
