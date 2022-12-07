@@ -1032,6 +1032,7 @@ img{
         padding: 6rem 0 2rem 2.5rem;
     }
 
+
     .services_modal-content{
         width: 450px;
     }
@@ -1053,4 +1054,11 @@ img{
         justify-self: flex-end;
     }
 
+}
+
+@media screen and (min-width: 1000px){
+    .services_modal{
+        padding-left: 47rem;
+        padding-top: -20rem;
+    }
 }
