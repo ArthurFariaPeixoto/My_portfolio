@@ -181,12 +181,26 @@ img{
 }
 
 .nav_toggle{
-    font-size: 1.1rem;
+    font-size: 1.1rem !important;
     cursor:pointer;
 }
 
 .nav_toggle:hover{
     color: var(--main_color);
+}
+
+@media screen and (max-width: 800px){
+    .nav_menu{
+        position: fixed;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--body_color);
+        padding: 2rem 1.5rem 4rem;
+        box-shadow: 0 -1px 4px rgba(0,0,0,.40);
+        border-radius: 1.5rem 1.5rem 0 0;
+        transition: .3s;
+    }
 }
 
 .nav_list{
@@ -208,20 +222,20 @@ img{
 }
 
 .nav_icon{
-    font-size: 1.2rem ;
+    font-size: 1.2rem !important;
 }
 
 .nav_close{
-    position: absolute !important;
-    right: 1.3rem !important;
-    bottom: .5rem !important;
+    position: absolute ;
+    right: 1.3rem ;
+    bottom: .5rem ;
     font-size: 1.5rem !important;
     cursor: pointer;
     color: var(--main_color);
 }
 
 .nav_close:hover{
-    color: var(--main_color_alt) !important;
+    color: var(--main_color_alt) ;
 }
 
 /*MOSTRA MENU*/
@@ -832,23 +846,9 @@ img{
     }
 }
 
-@media screen and (max-width: 767px){
-    .nav_menu{
-        position: fixed;
-        bottom: -100%;
-        left: 0;
-        width: 100%;
-        background-color: var(--body_color);
-        padding: 2rem 1.5rem 4rem;
-        box-shadow: 0 -1px 4px rgba(0,0,0,.40);
-        border-radius: 1.5rem 1.5rem 0 0;
-        transition: .3s;
-    }
-}
-
 
 /*Aparelhos pequenos*/
-@media screen and (max-width: 350px){
+@media screen and (max-width: 599px){
     .container{
         margin-left: var(--mb_1);
         margin-right: var(--mb_1);
@@ -893,7 +893,7 @@ img{
 }
 
 /*DISPOSITIVO MEDIO*/
-@media screen and (min-width: 568px){
+@media screen and (min-width: 600px){
     .home_content{
         grid-template-columns: max-content 1fr 1fr;
     }
@@ -921,7 +921,7 @@ img{
     }
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 800px){
     .container{
         margin-left: auto;
         margin-right: auto;

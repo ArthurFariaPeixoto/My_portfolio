@@ -23,7 +23,6 @@ function linkAction(){
     navMenu.classList.remove('show_menu')
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
-/////
 
 
 
