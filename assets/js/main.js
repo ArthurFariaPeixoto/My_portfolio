@@ -170,16 +170,34 @@ themeButton.addEventListener('click', () => {
 
 
 
-function enviaEmail(){
+
+function enviaEmail(valida){
+    verifica = valida.toString()
     assunto = document.getElementById('assunto')
     textoAssunto = assunto.value
 
     mensagem = document.getElementById('msg')
     textoMsg = mensagem.value
 
-    email = 'mailto:arthurfpeixoto@gmail.com?subject='+textoAssunto+'&amp;body='+textoMsg
-
     botao = document.getElementById('botaoEmail')
-    botao.outerHTML ='<a onclick="enviaEmail()" id="botaoEmail" class="button button_flex btn_pointer" href="'+email+'" target="_blank">Enviar mensagem <i class="fa fa-paper-plane-o button_icon"></i></a>'
+    textoErro = document.getElementById('erroEmail')
+
+    if(textoAssunto==='' || textoMsg===''){
+        textoErro.outerHTML ='<p id="erroEmail" style="visibility: visible; font-size: 12px; padding-top: 5px">Preencha todos os campos para enviar o email</p>'
+        return;
+    }
+    email = 'mailto:arthurfpeixoto@gmail.com?subject='+textoAssunto+'&amp;body='+textoMsg
+    if(verifica === '0') {
+        botao.outerHTML = '<a onclick="enviaEmail(1)" id="botaoEmail" class="button button_flex btn_pointer" href="' + email + '" target="_blank">Enviar mensagem <i class="fa fa-paper-plane-o button_icon"></i></a>'
+        textoErro.outerHTML = '<p id="erroEmail" style="visibility: visible; font-size: 12px; padding-top: 5px">Clique novamente para confirmar</p>'
+
+    }else if(verifica === '1'){
+        assunto.value = ''
+        mensagem.value = ''
+        botao.outerHTML = '<a onclick="enviaEmail(0)" id="botaoEmail" class="button button_flex btn_pointer"  target="_blank">Validar email</a>'
+        textoErro.outerHTML = '<p id="erroEmail" style="visibility: hidden; font-size: 12px; padding-top: 5px"></p>'
+    }
+
+
 
 }
