@@ -183,7 +183,7 @@ function enviaEmail(valida){
     textoErro = document.getElementById('erroEmail')
 
     if(textoAssunto==='' || textoMsg===''){
-        textoErro.outerHTML ='<p id="erroEmail" style="visibility: visible; font-size: 12px; padding-top: 5px">Preencha todos os campos para enviar o email</p>'
+        textoErro.outerHTML ='<p id="erroEmail" style="visibility: visible; font-size: 12px; padding-top: 5px; color: red">Preencha todos os campos para enviar o email</p>'
         return;
     }
     email = 'mailto:arthurfpeixoto@gmail.com?subject='+textoAssunto+'&amp;body='+textoMsg
