@@ -191,7 +191,7 @@ function enviaEmail(valida){
         botao.outerHTML = '<a onclick="enviaEmail(1)" id="botaoEmail" class="button button_flex btn_pointer" href="' + email + '" target="_blank">Enviar mensagem <i class="fa fa-paper-plane-o button_icon"></i></a>'
         textoErro.outerHTML = '<p id="erroEmail" style="visibility: visible; font-size: 12px; padding-top: 5px">Clique novamente para confirmar</p>'
 
-    }else if(verifica === '1'){
+    }else{
         assunto.value = ''
         mensagem.value = ''
         botao.outerHTML = '<a onclick="enviaEmail(0)" id="botaoEmail" class="button button_flex btn_pointer"  target="_blank">Validar email</a>'
