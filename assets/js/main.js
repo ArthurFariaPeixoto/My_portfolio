@@ -167,3 +167,19 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected_theme', getCurrentTheme())
     localStorage.setItem('selected_icon', getCurrentIcon())
 })
+
+
+
+function enviaEmail(){
+    assunto = document.getElementById('assunto')
+    textoAssunto = assunto.value
+
+    mensagem = document.getElementById('msg')
+    textoMsg = mensagem.value
+
+    email = 'mailto:arthurfpeixoto@gmail.com?subject='+textoAssunto+'&amp;body='+textoMsg
+
+    botao = document.getElementById('botaoEmail')
+    botao.outerHTML ='<a onclick="enviaEmail()" id="botaoEmail" class="button button_flex btn_pointer" href="'+email+'" target="_blank">Enviar mensagem <i class="fa fa-paper-plane-o button_icon"></i></a>'
+
+}

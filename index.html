@@ -508,31 +508,28 @@
                     </div>
                 </div>
 
-                <form action="" class="contact_form grid">
+                <form action="" id="formEmail" class="contact_form grid">
                     <div class="contact_inputs grid">
-                        <div class="contact_content">
-                            <label for="" class="contact_label">Nome</label>
-                            <input type="text" class="contact_input">
-                        </div>
-                        <div class="contact_content">
-                            <label for="" class="contact_label">E-mail</label>
-                            <input type="email" class="contact_input">
-                        </div>
+<!--                        <div class="contact_content">-->
+<!--                            <label for="email" class="contact_label">E-mail</label>-->
+<!--                            <input type="email" id="email" class="contact_input">-->
+<!--                        </div>-->
                     </div>
                     <div class="contact_content">
-                        <label for="" class="contact_label">Assunto</label>
-                        <input type="text" class="contact_input">
+                        <label for="assunto" class="contact_label">Assunto</label>
+                        <input type="text" id="assunto" class="contact_input">
                     </div>
                     <div class="contact_content">
-                        <label for="" class="contact_label">Mensagem</label>
-                        <textarea name="" id="" cols="0" rows="7" class="contact_input"></textarea>
+                        <label for="msg" class="contact_label">Mensagem</label>
+                        <textarea name="" id="msg" cols="0" rows="7" class="contact_input"></textarea>
                     </div>
 
                     <div>
-                        <a href="#" class="button button_flex">
+                        <a onclick='enviaEmail()' id="botaoEmail" class="button button_flex btn_pointer">
                             Enviar mensagem
                             <i class="fa fa-paper-plane-o button_icon"></i>
                         </a>
+                        <a id="botaoEnviaEmail" href="" target="_blank"></a>
                     </div>
                 </form>
             </div>

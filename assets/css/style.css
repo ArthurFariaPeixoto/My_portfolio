@@ -373,6 +373,10 @@ img{
     color: var(--main_color_alt);
 }
 
+.btn_pointer:hover{
+    cursor:pointer;
+}
+
 /*SOBRE*/
 .about_img{
     width: 200px;
